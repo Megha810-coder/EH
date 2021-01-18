@@ -1,0 +1,62 @@
+<div class="col-md-12">
+  <div class="card">
+      <div class="card-footer">
+          <a [routerLink] = "'/ehs_module/Industrial'"> <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Back </button></a>
+      </div>
+    <div class="card-header">
+      <strong>Industrial Programs Aspects </strong> 
+    </div>
+    <div class="card-body">
+      <form  class="form-horizontal" 
+        >
+        <!-- <div class="form-group row">
+          <label class="col-md-3 col-form-label">Static</label>
+          <div class="col-md-9">
+            <p class="form-control-static">Traning Name</p>
+          </div>
+        </div> -->
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="text-input">Programs Name</label>
+          <!-- <div class="col-md-9">
+            <input type="text" id="industrial_name" name="industrial_name" class="form-control" placeholder="Text" [(ngModel)]="ehs.industrial_name">
+      
+          </div> -->
+          {{ehs.industrial_name}}
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="email-input">Aspect</label>
+          <!-- <div class="col-md-9">
+            <input type="email" id="industrial_aspectt" name="industrial_aspect" class="form-control" placeholder="Enter Aspects" autocomplete="email" [(ngModel)]="ehs.industrial_aspect">
+           
+          </div> -->
+          {{ehs.industrial_aspect}}
+        </div>
+        <!-- <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="email-input">Training Rating</label>
+          <div class="col-md-9">
+            <input type="email" id="email-input" name="email-input" class="form-control" placeholder="Enter Email" autocomplete="email">
+           
+          </div>
+        </div> -->
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="textarea-input">Program Details</label>
+          <!-- <div class="col-md-9">
+            <textarea id="industrial_des" name="industrial_des" rows="9" class="form-control" placeholder="Content.." [(ngModel)]="ehs.industrial_des"></textarea>
+          </div> -->
+          {{ehs.industrial_des}}
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="date-input">Date</label>
+          <!-- <div class="col-md-9">
+            <input class="form-control" id="industrial_date" type="date" name="industrial_date" placeholder="date" [(ngModel)]="ehs.industrial_date">
+          
+          </div> -->
+          {{ehs.industrial_date}}
+        </div>
+       
+      </form>
+    </div>
+   
+  </div>
+ 
+</div>

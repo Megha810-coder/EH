@@ -1,0 +1,300 @@
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-md-12 mb-8">
+            <div class="card-footer">
+                <a [routerLink] = "'/ehs_module/Hazardous'"> <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Back </button></a>
+            </div>
+            <!-- Nav tabs -->
+            
+                <form 
+
+                >
+                  <tabset>
+              <tab>
+                <ng-template tabHeading><i class="icon-list"></i> Material Safety Data Sheet&nbsp;</ng-template>
+                <div class="card-body">
+                      <h3>A.MSDS:</h3>
+                      <hr>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label for="date"> <b>1)Chemical Name</b></label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="chemical_name" name="chemical_name" class="form-control" placeholder="" [(ngModel)]="ehs.chemical_name">
+                          </div>
+  
+                       <div class="col-md-3">
+                          <label for="date"><b>2)Synonyms</b></label>
+                        </div>
+                         <div class="col-md-3">
+                            <input type="text" id="synonyms" name="synonyms" class="form-control" placeholder=" " [(ngModel)]="ehs.synonyms">
+                          <br></div>
+                      </div>
+  
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label for="date"> <b>3)Product Code</b></label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="prod_code" name="prod_code" class="form-control" placeholder="" [(ngModel)]="ehs.prod_code">
+                          </div>
+  
+                       <div class="col-md-3">
+                          <label for="date"><b>4)Supplier Name</b></label>
+                        </div>
+                         <div class="col-md-3">
+                            <input type="text" id="supplier_name" name="supplier_name" class="form-control" placeholder="  " [(ngModel)]="ehs.supplier_name">
+                          <br></div>
+                      </div>
+                      
+                      <div class="form-group row">
+                          <label class="col-md-3 col-form-label" for="text-input"><b>5)Formula </b></label>
+                          <div class="col-md-6">
+                            <input type="text" id="formula" name="formula" class="form-control" placeholder="  " [(ngModel)]="ehs.formula">
+                          </div>
+                        </div>
+  
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="text-input"><b>6)Supplier Address</b></label>
+                    <div class="col-md-6">
+                        <textarea id="supplier_address" name="supplier_address" rows="4" class="form-control" placeholder="Write something here..." [(ngModel)]="ehs.supplier_address"></textarea>
+                      </div>
+                  </div>
+  
+                    <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="text-input"><b>7)Supplier Phone Number</b></label>
+                      <div class="col-md-6">
+                        <input type="text" id="supplier_phone" name="supplier_phone" class="form-control" placeholder="  " [(ngModel)]="ehs.supplier_phone">
+                      </div>
+                    </div>
+  
+      <h3>B.Physical and Chemical Properties:</h3>
+      <hr>
+          <div class="row">
+              <div class="col-md-3">
+                <label for="date"> <b>1)Physical State</b></label>
+              </div>
+              <div class="col-md-3">
+                  <input type="text" id="phy_state" name="phy_state" class="form-control" placeholder="  " [(ngModel)]="ehs.phy_state">
+                </div>
+  
+             <div class="col-md-3">
+                <label for="date"><b>2)Odor and Appearance</b></label>
+              </div>
+               <div class="col-md-3">
+                  <input type="text" id="odor_name" name="odor_name" class="form-control" placeholder="  " [(ngModel)]="ehs.odor_name">
+                <br></div>
+            </div>
+  
+            <div class="row">
+                <div class="col-md-3">
+                  <label for="date"> <b>3)Vapour Pressure</b></label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="vapor_pressure" name="vapor_pressure" class="form-control" placeholder="  " [(ngModel)]="ehs.vapor_pressure">
+                  </div>
+    
+               <div class="col-md-3">
+                  <label for="date"><b>4)Vapor Density</b></label>
+                </div>
+                 <div class="col-md-3">
+                    <input type="text" id="vapor_density" name="vapor_density" class="form-control" placeholder="  " [(ngModel)]="ehs.vapor_density">
+                  <br></div>
+              </div>
+  
+              <div class="row">
+                  <div class="col-md-3">
+                    <label for="date"> <b>5)Evaporation Rate</b></label>
+                  </div>
+                  <div class="col-md-3">
+                      <input type="text" id="evaporation_rate" name="evaporation_rate" class="form-control" placeholder="  " [(ngModel)]="ehs.evaporation_rate">
+                    </div>
+      
+                 <div class="col-md-3">
+                    <label for="date"><b>6)Boiling Point</b></label>
+                  </div>
+                   <div class="col-md-3">
+                      <input type="text" id="boiling_point" name="boiling_point" class="form-control" placeholder="  " [(ngModel)]="ehs.boiling_point">
+                    <br></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                      <label for="date"> <b>7)Melting Point</b></label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" id="melting_point" name="melting_point" class="form-control" placeholder="  " [(ngModel)]="ehs.melting_point">
+                      </div>
+                  </div>
+                  
+                  </div>
+              </tab>
+  
+              <tab>
+                <ng-template tabHeading><i class="icon-calculator"></i> Hazard Identification &nbsp;</ng-template>
+             <h3>C.Hazard Identification:</h3>
+             <hr>
+                <div class="form-group row">
+  <div class="col-sm-12">
+  <div class="row">
+  <div class="col-sm-6">
+  <label for="name-2" class="block"><b>1)Skin Contact</b></label>
+  <textarea rows="3" cols="50" id="skin_contact" name="skin_contact"
+  type="text" class=" form-control" [(ngModel)]="ehs.skin_contact"></textarea>
+  </div>
+  <div class="col-sm-6">
+  
+  <label for="text-2" class="block"><b>2)Eye Contact</b></label>
+  <textarea rows="3" cols="50" id="eye_contact" name="eye_contact"
+  type="text" class=" form-control" [(ngModel)]="ehs.eye_contact"></textarea>
+  </div>
+  </div>
+  </div>
+  </div>
+                  <div class="form-group row">
+                      <div class="col-sm-12">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <label for="name-2" class="block"><b>3)Inhalation</b></label>
+                            <textarea rows="3" cols="50" id="inhalation" name="inhalation"
+                              type="text" class=" form-control" [(ngModel)]="ehs.inhalation"></textarea>
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="name-2" class="block"><b>4)Long term Toxic
+                              Effect</b></label>
+                            <textarea rows="3" cols="50" id="toxic_effect" name="toxic_effect"
+                              type="text" class=" form-control" [(ngModel)]="ehs.toxic_effect"></textarea>
+                          </div>
+    
+                        </div>
+                      </div>
+                    </div>
+  
+            <h3>D.Risk Assessment:</h3> 
+            <hr>    
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                      <label for="address-2" class="block"><b>1)</b></label>
+                    </div>
+                    <div class="col-sm-6">
+                      <input id="RA1" name="RA1" type="text"
+                        class="form-control" [(ngModel)]="ehs.RA1">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                      <div class="col-sm-12">
+                        <label for="address-2" class="block"><b>2)</b></label>
+                      </div>
+                      <div class="col-sm-6">
+                        <input id="RA2" name="RA2" type="text"
+                          class="form-control" [(ngModel)]="ehs.RA2">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                          <label for="address-2" class="block"><b>3)</b></label>
+                        </div>
+                        <div class="col-sm-6">
+                          <input id="RA2" name="RA3" type="text"
+                            class="form-control" [(ngModel)]="ehs.RA3">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                          <div class="col-sm-12">
+                            <label for="address-2" class="block"><b>4)</b></label>
+                          </div>
+                          <div class="col-sm-6">
+                            <input id="RA2" name="RA4" type="text"
+                              class="form-control" [(ngModel)]="ehs.RA4">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                              <label for="address-2" class="block"><b>5)</b></label>
+                            </div>
+                            <div class="col-sm-6">
+                              <input id="RA2" name="RA5" type="text"
+                                class="form-control" [(ngModel)]="ehs.RA5">
+                            </div>
+                          </div>
+              </tab>
+  
+              <tab>
+                <ng-template tabHeading><i class="icon-pie-chart"></i> Treatment</ng-template>
+                <h3>E.Treatment:</h3>
+                <hr>
+                <div class="form-group row">
+  <div class="col-sm-12">
+  <div class="row">
+  <div class="col-sm-6">
+  <label for="name-2" class="block"><b>1)Skin Contact</b></label>
+  <textarea rows="3" cols="50" id="skin_contacts" name="fa_skin_contacts"
+  type="text" class=" form-control" [(ngModel)]="ehs.skin_contacts"></textarea>
+  </div>
+  <div class="col-sm-6">
+  <label for="text-2" class="block"><b>2)Eye Contact</b></label>
+  <textarea rows="3" cols="50" id="eye_contacts" name="fa_eye_contacts"
+  type="text" class=" form-control" [(ngModel)]="ehs.eye_contacts"></textarea>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="form-group row">
+  <div class="col-sm-12">
+  <div class="row">
+  <div class="col-sm-6">
+  <label for="name-2" class="block"><b>3)Inhalation</b></label>
+  <textarea rows="3" cols="50" id="inhalations" name="fa_inhalations"
+  type="text" class=" form-control" [(ngModel)]="ehs.inhalations"></textarea>
+  </div>
+  </div>
+                  </div>
+                  </div>
+             
+          <h3>F.Documents:</h3>
+                  <div class="row">
+                      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      <label for="emp_doc" class="block"><b>Document Name:</b></label>
+                      </div>
+                      <div class="  col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                          <input type="file" class="form-control" onchange="document.getElementById('emp_doc2').src = window.URL.createObjectURL(this.files[0])" id="emp_doc2" name="document.emp_doc2" [(ngModel)]="ehs.skin_contacts">
+                      </div>	
+                  </div>
+                
+              </tab>
+              <!-- <div class="card-footer">
+                  <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Previous</button>
+                  <button type="submit"  value= "submit" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Submit</button>
+                </div> -->
+              </tabset>
+              <div class="card-footer">
+                <button type="submit" class="btn btn-sm btn-primary" data-toggle="modal" (click)="infoModal.show()"><i class="fa fa-dot-circle-o"></i> Submit </button>
+                </div>
+              </form>
+            
+         </div> <!--/.col-->
+    </div>
+    </div>
+    <div bsModal #infoModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Send</h4>
+            <button type="button" class="close" (click)="infoModal.hide()" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Your Data Saved successfully.&hellip;</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="infoModal.hide()">Close</button>
+            <a [routerLink] = "'/ehs_module/Hazardous'">  <button type="button" class="btn btn-info">Okay</button></a>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+      
+    
+    
+  

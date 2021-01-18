@@ -1,0 +1,196 @@
+<head>
+    <style>
+      .card-header {
+        background-color: #BFC9CA;
+      }
+    </style>
+  </head>
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+              <div class="card-footer">
+                  <a [routerLink] = "'/ehs_module/Hira'"> <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Back </button></a>
+              </div>
+          <div class="card-header">
+            <h3>Hazard Identification and Risk Analysis (HIRA)</h3>
+          </div>
+          <div class="card-body">
+            <form class="form-horizontal" 
+            (ngSubmit) = "onClickSubmit()">
+           
+              <div class="col-sm-12 row">
+                  <div class="col-sm-12 ">
+                        <div class="row">
+                          <div >
+                            <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Activity :</b></label>
+                           </div>
+                          <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                              <textarea id="activity" name="activity" type="text" class=" form-control" [(ngModel)]="ehs.activity"></textarea>
+                          </div>
+                 </div>
+             </div>
+             </div>
+             <hr>
+             <legend>Aspect</legend>
+             <div class="col-sm-12 row">
+                <div class="col-sm-12 ">
+                      <div class="row">
+                        <div >
+                          <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Land      :</b></label>
+                         </div>
+                        <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                            <textarea id="land" name="land" type="text" class=" form-control" [(ngModel)]="ehs.land"></textarea>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div >
+                          <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Air     :</b></label>
+                         </div>
+                        <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                            <textarea id="air" name="air" type="text" class=" form-control" [(ngModel)]="ehs.air"></textarea>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div >
+                          <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Water     :</b></label>
+                         </div>
+                        <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                            <textarea id="water" name="water" type="text" class=" form-control" [(ngModel)]="ehs.water"></textarea>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div >
+                          <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Human     :</b></label>
+                         </div>
+                        <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                            <textarea id="human" name="human" type="text" class=" form-control" [(ngModel)]="ehs.human"></textarea>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div >
+                          <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Resources :</b></label>
+                         </div>
+                        <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                            <textarea id="resource" name="resource" type="text" class=" form-control" [(ngModel)]="ehs.resource"></textarea>
+                        </div>
+                     </div>
+                </div>
+              </div> 
+              <hr>
+              <legend>Impact on</legend> 
+              <div class="col-sm-12 row">
+                  <div class="col-sm-12 ">
+                        <div class="row">
+                          <div >
+                            <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Land      :</b></label>
+                           </div>
+                          <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                              <textarea id="land1" name="land1" type="text" class=" form-control" [(ngModel)]="ehs.land1"></textarea>
+                          </div>
+                       </div>
+                       <div class="row">
+                          <div >
+                            <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Air     :</b></label>
+                           </div>
+                          <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                              <textarea id="air1" name="air1" type="text" class=" form-control" [(ngModel)]="ehs.air1"></textarea>
+                          </div>
+                       </div>
+                       <div class="row">
+                          <div >
+                            <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Water     :</b></label>
+                           </div>
+                          <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                              <textarea id="water1" name="water1" type="text" class=" form-control" [(ngModel)]="ehs.water1"></textarea>
+                          </div>
+                       </div>
+                       <div class="row">
+                          <div >
+                            <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Human     :</b></label>
+                           </div>
+                          <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                              <textarea id="human1" name="human1" type="text" class=" form-control" [(ngModel)]="ehs.human1"></textarea>
+                          </div>
+                       </div>
+                       <div class="row">
+                          <div >
+                            <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Resources :</b></label>
+                           </div>
+                          <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                              <textarea id="resource1" name="resource1" type="text" class=" form-control" [(ngModel)]="ehs.resource1"></textarea>
+                          </div>
+                       </div>
+                  </div>
+                </div> 
+                <hr>
+                <div class="row">
+                    <div>
+                      <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Total Rating :</b></label>
+                     </div>
+                    <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                        <textarea id="total_rating" name="total_rating" type="text" class=" form-control" [(ngModel)]="ehs.total_rating" ></textarea>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div >
+                      <label for="emp_code" class="block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Legal Exposure :</b></label>
+                     </div>
+                    <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                        <textarea id="legal" name="legal" type="text" class=" form-control" [(ngModel)]="ehs.impact_rating"></textarea>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div >
+                      <label for="emp_code" class="block"><b>Frequency of occurrence :</b></label>
+                     </div>
+                    <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                        <textarea id="frequency" name="frequency" type="text" class=" form-control" [(ngModel)]="ehs.frequency"></textarea>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div >
+                      <label for="emp_code" class="block" a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Overall Imapct Rating :</b></label>
+                     </div>
+                    <div class="form-group col-sm-10  col-md-8 col-lg-8 col-xl-8">
+                        <textarea id="impact_rating" name="impact_rating" type="text" class=" form-control" [(ngModel)]="ehs.legal" ></textarea>
+                    </div>
+                 </div>
+                 <div class="card-footer">
+                  <button type="submit" class="btn btn-sm btn-primary" data-toggle="modal" (click)="infoModal.show()"><i class="fa fa-dot-circle-o"></i> Submit </button>
+                  </div>
+                  
+            </form>
+          </div>
+          <!-- <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save </button>
+            <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset </button>
+          </div> -->
+        </div>
+  
+      <!--/.col-->
+    </div>
+    <!--/.row-->
+  </div>
+  <div bsModal #infoModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-info" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Send</h4>
+          <button type="button" class="close" (click)="infoModal.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Your Data Saved successfully.&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="infoModal.hide()">Close</button>
+          <a [routerLink] = "'/ehs_module/Hira'">  <button type="button" class="btn btn-info">Okay</button></a>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+  
+  

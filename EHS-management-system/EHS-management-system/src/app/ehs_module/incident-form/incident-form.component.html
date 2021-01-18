@@ -1,0 +1,573 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-md-12 mb-4">
+        <div class="card-footer">
+            <a [routerLink] = "'/ehs_module/Incident'"> <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Back </button></a>
+        </div>
+      <!-- Nav tabs -->
+      <form class="form-horizontal" 
+      (ngSubmit) = "onClickSubmit()">
+      <tabset>
+        
+        <tab>
+          <ng-template tabHeading><i class="icon-list"></i> Accident Information</ng-template>
+          <div class="row">
+            <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                      <div class="row">
+                            <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                              <label for="emp_code" class="block"><b>Employee Code</b></label>
+                             </div>
+                            <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                <input id="emp_code" name="emp_code" type="text" class=" form-control" placeholder="Employee code"  [(ngModel)]="ehs.emp_code">
+                            </div>
+              </div>
+                     </div>
+                   
+                </div>
+          
+                <div class="row">
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                     <div class="row">
+                       <div class="  col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                              <label for="emp_fname" class="block"><b>Employee Name</b></label>
+                             </div>
+                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                              <select name="emp_title" id="emp_title" class="form-control"
+                                  required data-bv-notempty-message="Please select title."   [(ngModel)]="ehs.title">
+                                  <option value="">---Select Title---</option>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Mrs.">Mrs.</option>
+                                    <option value="Miss.">Miss.</option>
+                                 </select>
+                </div>
+                <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                           <input id="emp_fname" name="emp_fname" type="text" class=" form-control" 
+                                      placeholder="First Name"
+                                      required data-bv-notempty-message="Please enter first name."   [(ngModel)]="ehs.fname">
+                          </div>
+                          <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                <input id="emp_mname" name="emp_mname" type="text" class=" form-control"
+                                placeholder="Middle Name" 
+                                required data-bv-notempty-message="Please enter middle name."   [(ngModel)]="ehs.mname">
+                            </div>
+                            <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                <input id="emp_lname" name="emp_lname" type="text" class=" form-control"
+                                placeholder="Last Name" 
+                                required data-bv-notempty-message="Please enter last name."   [(ngModel)]="ehs.lname">
+                            </div>
+                       </div>
+                     </div>
+            
+            </div>
+            <div class="row">    
+                <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                          <div class="row">
+                                <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                  <label for="plant_id" class="block"><b>Plant Id</b></label>
+                                 </div>
+                                <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                    <input id="plant_id" name="plant_id" type="text" class=" form-control" placeholder="Plant Id"  
+                                     [(ngModel)]="ehs.plant_id" >
+                                </div>
+                  </div>
+                         </div>
+                       
+                    </div>
+            <div class="row">    
+             <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <div class="row">
+                             <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                               <label for="plant_name" class="block"><b>Plant Name</b></label>
+                              </div>
+                             <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                 <input id="plant_name" name="plant_name" type="text" class=" form-control" placeholder="Plant name"  
+                                  [(ngModel)]="ehs.plant_name" >
+                             </div>
+               </div>
+                      </div>
+                    
+                 </div>
+                 <div class="row">
+                   <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                             <div class="row">
+                                   <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                     <label for="dept" class="block"><b>Department</b></label>
+                                    </div>
+                                   <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                       <input id="dept" name="dept" type="text" class=" form-control" placeholder="Department" 
+                                        [(ngModel)]="ehs.department">
+                                   </div>
+                     </div>
+                            </div>
+                          
+                       </div>
+                       <div class="row">
+                         <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                   <div class="row">
+                                         <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                           <label for="location" class="block"><b>Incident Location</b></label>
+                                          </div>
+                                         <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                             <input id="location" name="incident_location" type="text" class=" form-control" placeholder="Location"  
+                                             [(ngModel)]="ehs.incident_location">
+                                         </div>
+                           </div>
+                                  </div>
+                                
+                             </div>
+
+                             <div class="row">
+                              <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="row">
+                                              <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                <label for="location" class="block"><b>Accident By </b></label>
+                                               </div>
+                                               <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                <select name="accident_by" id="accident_by" class="form-control"
+                                                required data-bv-notempty-message="Please select title."   [(ngModel)]="ehs.accident_by">
+                                                <option value="">---Select---</option>
+                                                  <option value="Human">Human</option>
+                                                  <option value="Machine">Machine</option>
+                                                  
+                                               </select>
+                                               </div>
+                                              
+                                </div>
+                                       </div>
+                                     
+                                  </div>
+                             <div class="row">
+                               <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                         <div class="row">
+                                               <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                 <label for="number" class="block"><b>Personal Mobile Number</b></label>
+                                                </div>
+                                               <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                   <input id="number" name="number" type="text" class=" form-control" placeholder="Personal Mobile Number"
+                                                     [(ngModel)]="ehs.personal_mobile">
+                                               </div>
+                                 </div>
+                                        </div>
+                                      
+                                   </div>
+                                   <div class="row">
+                                     <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                               <div class="row">
+                                                     <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                       <label for="number" class="block"><b>Emergency Mobile Number</b></label>
+                                                      </div>
+                                                     <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                         <input id="emnumber" name="emnumber" type="text" class=" form-control" placeholder="Emergency Mobile Number"  
+                                                         [(ngModel)]="ehs.emergency_mobile">
+                                                     </div>
+                                       </div>
+                                              </div>
+                                            
+                                         </div>
+                                         <div class="row">
+                                          <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6"> 
+                                              <div class="row">
+                                              <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                  <label for="number" class="block" name="description"><b>Description</b></label>
+                                                 </div>
+                                        <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                        <textarea rows="4" cols="50" class="form-control" name="description" id="description" placeholder="Enter Description Details"
+                                        placeholder="Please enter Description."   [(ngModel)]="ehs.description"></textarea>
+                                        </div>
+                                         </div>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-6"> 
+                                       <div class="row">
+                                          <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                              <label for="number" class="block" name="action"><b>Imediate Action Taken</b></label>
+                                             </div>
+                                        <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                        <textarea rows="4" cols="50" class="form-control" name="action" id="action" placeholder="Type Here"
+                                        placeholder="Type Here"  [(ngModel)]="ehs.action"></textarea> 
+                                        </div>
+                                         </div>
+                                         </div>
+                                         </div>
+                                         <div class="row">
+                                          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                            <div class="row">
+                                              <div class="  col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                                     <label for="emp_fname" class="block" name="happen"><b>When Did It Happen?</b></label>
+                                                    </div>
+                                      
+                                       <div class="  col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                          <label for="date" class="block" name="date"><b>Date</b></label>
+                                          <input type="date" name="action_date" placeholder="date"   [(ngModel)]="ehs.action_date">
+                                         </div>
+
+                                         <div class="  col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                          <label for="time" class="block" ><b>Time</b></label>
+                                          <input type="text" name="time"   [(ngModel)]="ehs.time">
+                                         </div>
+  </div>
+  </div>
+        </div>          
+                          
+                                 
+                                         
+        </tab>
+        <tab>
+          <ng-template tabHeading><i class="icon-calculator"></i> Witnessed &nbsp;</ng-template>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="row">
+                <div class="  col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                       <label for="emp_fname" class="block"><b>Name</b></label>
+                      </div>
+         <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                       <select name="witness_name" id="wit_title" class="form-control"
+                           required data-bv-notempty-message="Please select title."   [(ngModel)]="ehs.witness_name">
+                           <option value="">---Select Title---</option>
+                             <option value="Mr.">Mr.</option>
+                             <option value="Mrs.">Mrs.</option>
+                             <option value="Miss.">Miss.</option>
+                          </select>
+         </div>
+         <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                    <input id="wit_fname" name="witness_fname" type="text" class=" form-control" 
+                               placeholder="First Name"
+                               required data-bv-notempty-message="Please enter first name."  [(ngModel)]="ehs.witness_fname">
+                   </div>
+                   <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                         <input id="wit_mname" name="witness_mname" type="text" class=" form-control"
+                         placeholder="Middle Name" 
+                         required data-bv-notempty-message="Please enter middle name."  [(ngModel)]="ehs.witness_mname">
+                     </div>
+                     <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                         <input id="wit_lname" name="witness_lname" type="text" class=" form-control"
+                         placeholder="Last Name" 
+                         required data-bv-notempty-message="Please enter last name."  [(ngModel)]="ehs.witness_lname">
+                     </div>
+                </div>
+              </div>
+     
+     </div>   
+     
+     <div class="row">
+      <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="row">
+                      <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <label for="dept" class="block" ><b>Department</b></label>
+                       </div>
+                      <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                          <input id="wit_dept" name="wit_dept" type="text" class=" form-control"
+                           placeholder="Department"  [(ngModel)]="ehs.wit_dept">
+                      </div>
+        </div>
+               </div>
+             
+          </div>
+
+           
+     <div class="row">
+      <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="row">
+                      <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <label for="dept" class="block"><b>Phone Number</b></label>
+                       </div>
+                      <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                          <input id="wit_phone" name="witness_phone" type="text" class=" form-control" 
+                          placeholder="Phone Number"  [(ngModel)]="ehs.witness_phone">
+                      </div>
+        </div>
+               </div>
+             
+          </div>
+
+           
+     <div class="row">
+      <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="row">
+                      <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <label for="dept" class="block"><b>E-mail</b></label>
+                       </div>
+                      <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                          <input id="wit_email" name="witness_email" type="text" class=" form-control" 
+                          placeholder="example@gmail.com" [(ngModel)]="ehs.witness_email">
+                      </div>
+        </div>
+               </div>
+             
+          </div>
+         
+                          
+        </tab>
+        
+        <tab>
+            <ng-template tabHeading><i class="icon-pie-chart"></i> Treatment</ng-template>
+   
+
+            <div class="row">
+              <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <div class="row">
+                              <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <label for="pro_name" class="block"><b>Initial Treatment</b></label>
+                               </div>
+                              <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                  <input id="ini_tre" name="ini_tre" type="text" class=" form-control" 
+                                  placeholder="FIRST AID" [(ngModel)]="ehs.ini_tre">
+                              </div>
+                </div>
+                       </div>
+                     
+                  </div>
+                  <div class="row">
+                    <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                              <div class="row">
+                                    <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                      <label for="pro_name" class="block"><b>Secondary Treatment</b></label>
+                                     </div>
+                                    <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                        <input id="sec_tre" name="sec_name" type="text" class=" form-control" 
+                                        placeholder="Company Medical Room" [(ngModel)]="ehs.sec_name">
+                                    </div>
+                      </div>
+                             </div>
+                           
+                        </div>
+                        <div class="row">
+                          <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="row">
+                                          <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                            <label for="pro_name" class="block"><b>Hospital Treatment</b></label>
+                                           </div>
+                                          <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                              <input id="hos_tre" name="hos_tre" type="text" class=" form-control"
+                                               placeholder=" " [(ngModel)]="ehs.hos_tre">
+                                          </div>
+                            </div>
+                                   </div>
+                                 
+                              </div>
+                              <!-- <div class="form-group row">
+                                <div class="col-sm-12">
+                                <div class="row">
+                               <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                                <label for="emp_gender" class="block"><strong>Return to work on same day</strong></label>
+                                            </div>
+                                            <div class="form-group form-radio col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                                <div class="radio radio-inline">
+                                                    <label>
+                                                        <input type="radio" class="form_control" name="Return_1" id="Return_1" value="1" [(ngModel)]="ehs.">
+                                                        <i class="helper"></i>Yes &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" class="form_control" name="Return_2" id="Return_2" value="2" [(ngModel)]="ehs.">
+                                                        <i class="helper"></i>No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                            </div> -->
+                            <!-- <div class="form-group row">
+                              <div class="col-sm-12">
+                              <div class="row">
+                             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                      <div class="row">
+                                          <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                              <label for="emp_gender" class="block"><strong>Return to work on next day </strong></label>
+                                          </div>
+                                          <div class="form-group form-radio col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                              <div class="radio radio-inline">
+                                                  <label>
+                                                      <input type="radio" class="form_control" name="next_1" id="next_1" value="1" [(ngModel)]="ehs.">
+                                                      <i class="helper"></i>Yes &nbsp;&nbsp;&nbsp;&nbsp;
+                                                  </label>
+                                                  <label>
+                                                      <input type="radio" class="form_control" name="next_2" id="next_2" value="2" [(ngModel)]="ehs.">
+                                                      <i class="helper"></i>No
+                                                  </label>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                          </div>
+                          </div>
+                          </div> -->
+                            
+                              <!-- <div class="form-group row">
+                                <div class="col-sm-12">
+                                <div class="row">
+                               <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                                <label for="emp_gender" class="block"><strong>Admitted for more than two days</strong></label>
+                                            </div>
+                                            <div class="form-group form-radio col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                                <div class="radio radio-inline">
+                                                    <label>
+                                                        <input type="radio" class="form_control" name="two_1" id="two_1" value="1" [(ngModel)]="ehs.">
+                                                        <i class="helper"></i>Yes &nbsp;&nbsp;&nbsp;&nbsp;
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" class="form_control" name="two_2" id="two_2" value="2" [(ngModel)]="ehs.">
+                                                        <i class="helper"></i>No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                            </div> -->
+                            <div class="row">
+                              <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-6"> 
+                             <div class="row">
+                                <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                    <label for="comment" class="block"><b>Comment</b></label>
+                                   </div>
+                              <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                              <textarea rows="4" cols="50" class="form-control" name="tre_comment" placeholder="Type Here"
+                              placeholder="Type Here" [(ngModel)]="ehs.tre_comment"></textarea>
+                               </div>
+                               </div>
+                               </div>
+                               </div>
+                               <div class="row">
+                                <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-6"> 
+                               <div class="row">
+                                  <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                      <label for="comment" class="block"><b>Documents</b></label>
+                                     </div>
+                                <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                    <input type="file" class="form-control" onchange="document.getElementById('emp_doc1_view').src = window.URL.createObjectURL(this.files[0])" id="emp_doc1" name="emp_doc1" ngModel>
+                                </div>
+                                 </div>
+                                 </div>
+                                 </div> 
+          </tab>
+          <tab>
+            <ng-template tabHeading><i class="icon-pie-chart"></i> Why-Why Analysis</ng-template>
+            <div class="card-header">
+              <h3>Why-Why Analysis</h3>
+            </div>
+            <div class="card-body">
+             
+             
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                <div class="form-group row">
+                  <div class="part">
+                  
+                    <textarea rows="1" cols="20" id="why1"
+                      type="text" class=" form-control" name="why1" placeholder="Why?" [(ngModel)]="ehs.why1" ></textarea>
+        
+              
+                  </div>
+                  
+                  <div class="col-sm-3">
+                    <textarea rows="1" cols="20" id="why2"
+                       type="text" class=" form-control"  name="why2" placeholder="Why?" [(ngModel)]="ehs.why2" ></textarea>
+        
+                  </div>
+                
+                  
+                  <div class="col-sm-3">
+                    <textarea rows="1" cols="20" id="why3"
+                      type="text" class=" form-control" name="why3" placeholder="Why?" [(ngModel)]="ehs.why3" ></textarea>
+        
+                  </div>
+                </div>
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                <div class="form-group row">
+                  
+                  <div class="sm-3">
+                    <textarea rows="1" cols="20" id="why4"
+                       type="text" class=" form-control" name="why4" placeholder="Why?" [(ngModel)]="ehs.why4" ></textarea>
+        
+                  </div>
+                </div>
+                
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                <div class="form-group row">
+                  <div class="part">
+                  
+                    <textarea rows="1" cols="20" id="why5"
+                       type="text" class=" form-control" name="why5"  placeholder="Why?" [(ngModel)]="ehs.why5"></textarea>
+        
+              
+                  </div>
+              
+                  <div class="col-sm-3">
+                    <textarea rows="1" cols="20" id="why6"
+                       type="text" class=" form-control"  name="why6" placeholder="Why?" [(ngModel)]="ehs.why6" ></textarea>
+        
+                  </div>
+                
+                  
+                  <div class="col-sm-3">
+                    <textarea rows="1" cols="20" id="why7"
+                       type="text" class=" form-control" name="why7" placeholder="Why?" [(ngModel)]="ehs.why7" ></textarea>
+        
+                  </div>
+                </div>
+                <br>
+                <br>
+                <br>
+            
+            </div>
+           
+          </tab>
+
+          <!-- <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Previous</button>
+            <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Next</button>
+          </div> -->
+       
+      </tabset>
+      <div class="card-footer">
+      <button type="submit" class="btn btn-sm btn-primary" data-toggle="modal" (click)="infoModal.show()"><i class="fa fa-dot-circle-o"></i> Submit </button>
+      </div>
+    </form>
+    </div><!--/.col-->
+    
+  </div><!--/.row-->
+  
+</div>
+<div bsModal #infoModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-info" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Send</h4>
+        <button type="button" class="close" (click)="infoModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Your Data Saved successfully.&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="infoModal.hide()">Close</button>
+        <a [routerLink] = "'/ehs_module/Incident'">  <button type="button" class="btn btn-info">Okay</button></a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  
+

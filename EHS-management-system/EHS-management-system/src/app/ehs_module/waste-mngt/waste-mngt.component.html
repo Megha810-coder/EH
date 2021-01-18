@@ -1,0 +1,86 @@
+
+<div class="col-lg-12">
+  <div class="card">
+      <div class="w3-bar"> 
+          <div class="input-group">
+              <div class="row align-items-center">
+                
+                <!-- <div class="btn-group" dropdown>
+                  <button dropdownToggle type="button" class="btn btn-pill btn btn-primary dropdown-toggle">
+                    New <span class="caret"></span>
+                  </button>
+                  <ul *dropdownMenu class="dropdown-menu" role="menu">
+                    <a class="dropdown-item" [routerLink] = "'/ehs/Waste-Form'"><li role="menuitem">Create</li></a>
+                    <a class="dropdown-item" [routerLink] = "'/neha/Invite'"><li role="menuitem">Invite Visitors</li></a>
+                  </ul>
+                </div>    -->
+                <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                     <button type="button" class="btn btn-pill btn-block btn-primary" (click)="save();">Create</button>
+                  </div>
+                  <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    <a [routerLink] = "'/ehs_module/Mail'"> <button type="button" class="btn btn-pill btn-block btn-primary">Email</button></a>
+                  </div>
+                  
+                  <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                    <a [routerLink] = "'/ehs_module/Back'"> <button type="submit" class="btn btn-pill btn-block btn-primary"> Back </button></a>
+                </div>
+
+                  <div class="form-group">
+                      <div class="controls">
+                        <div class="input-group">
+                          <input id="appendedInputButtons" size="18" class="form-control" type="text" placeholder="Search..">
+                          <span class="input-group-append">
+                            <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+    <div class="card-header">
+        <i class="fa fa-align-justify"></i><b>Waste Report</b>
+    </div>
+    <div class="card-body">
+           <table class="table table-bordered table-striped table-sm">
+            <thead>
+             
+              <th>MATERIAL NAME</th>
+              <th>QUANITITY</th>
+              <th>DISPOSAL DATE</th>
+              <th>DEPARTMENT</th>
+             
+              <th>Action</th>
+              
+            </thead>
+            <tbody>
+              <tr *ngFor="let waste of myresponse">
+                 
+                <td>{{waste.chem_name }}</td>
+                <td>{{waste.quantity}}</td>
+                <td>{{waste.disposal_date}}</td>
+                <td>{{waste.waste_department}}</td>
+               
+                <td><button type="button" class="btn btn-info mr-1" (click)="updateWaste(waste);">UPDATE</button> 
+                    
+                    <button type="button" class="btn btn-info mr-1" (click)="viewWaste(waste);">VIEW</button> 
+                  
+                    <button type="button" class="btn btn-info mr-1" (click)="deleteWaste(waste.waste_id);">DELETE</button> </td>
+              </tr>
+            </tbody>  
+          </table>
+
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--/.col-->

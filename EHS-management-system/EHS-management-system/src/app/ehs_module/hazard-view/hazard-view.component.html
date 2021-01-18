@@ -1,0 +1,267 @@
+<div class="animated fadeIn">
+  <div class="row">
+      <div class="col-md-12 mb-8">
+          <div class="card-footer">
+              <a [routerLink] = "'/ehs_module/Hazardous'"> <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Back </button></a>
+          </div>
+          <!-- Nav tabs -->
+          
+              <form >
+                <tabset>
+            <tab>
+              <ng-template tabHeading><i class="icon-list"></i> Material Safety Data Sheet&nbsp;</ng-template>
+              <div class="card-body">
+                    <h3>A.MSDS:</h3>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label for="date"> <b>1)Chemical Name : </b></label>
+                      </div>
+                      <div class="col-md-3">
+                          {{ehs.chemical_name}}
+                        </div>
+
+                     <div class="col-md-3">
+                        <label for="date"><b>2)Synonyms : </b></label>
+                      </div>
+                       <div class="col-md-3">
+                          {{ehs.synonyms}}
+                        <br></div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label for="date"> <b>3)Product Code : </b></label>
+                      </div>
+                      <div class="col-md-3">
+                          {{ehs.prod_code}}
+                        </div>
+
+                     <div class="col-md-3">
+                        <label for="date"><b>4)Supplier Name : </b></label>
+                      </div>
+                       <div class="col-md-3">
+                          {{ehs.supplier_name}}
+                        <br></div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="text-input"><b>5)Formula : </b></label>
+                        <div class="col-md-6">
+                          {{ehs.formula}}
+                        </div>
+                      </div>
+
+              <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="text-input"><b>6)Supplier Address :</b></label>
+                  <div class="col-md-6">
+                      {{ehs.supplier_address}}
+                    </div>
+                </div>
+
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="text-input"><b>7)Supplier Phone Number :</b></label>
+                    <div class="col-md-6">
+                      {{ehs.supplier_phone}}
+                    </div>
+                  </div>
+
+    <h3>B.Physical and Chemical Properties:</h3>
+    <hr>
+        <div class="row">
+            <div class="col-md-3">
+              <label for="date"> <b>1)Physical State : </b></label>
+            </div>
+            <div class="col-md-3">
+              {{ehs.phy_state}}
+              </div>
+
+           <div class="col-md-3">
+              <label for="date"><b>2)Odor and Appearance : </b></label>
+            </div>
+             <div class="col-md-3">
+            {{ehs.odor_name}}
+              <br></div>
+          </div>
+
+          <div class="row">
+              <div class="col-md-3">
+                <label for="date"> <b>3)Vapour Pressure : </b></label>
+              </div>
+              <div class="col-md-3">
+              {{ehs.vapor_pressure}}
+                </div>
+  
+             <div class="col-md-3">
+                <label for="date"><b>4)Vapor Density : </b></label>
+              </div>
+               <div class="col-md-3">
+              {{ehs.vapor_density}}
+                <br></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                  <label for="date"> <b>5)Evaporation Rate :</b></label>
+                </div>
+                <div class="col-md-3">
+                {{ehs.evaporation_rate}}
+                  </div>
+    
+               <div class="col-md-3">
+                  <label for="date"><b>6)Boiling Point : </b></label>
+                </div>
+                 <div class="col-md-3">
+                  {{ehs.boiling_point}}
+                  <br></div>
+              </div>
+              <div class="row">
+                  <div class="col-md-3">
+                    <label for="date"> <b>7)Melting Point  : </b></label>
+                  </div>
+                  <div class="col-md-3">
+                 {{ehs.melting_point}}
+                    </div>
+                </div>
+                
+                </div>
+            </tab>
+
+            <tab>
+              <ng-template tabHeading><i class="icon-calculator"></i> Hazard Identification &nbsp;</ng-template>
+           <h3>C.Hazard Identification:</h3>
+           <hr>
+              <div class="form-group row">
+<div class="col-sm-12">
+<div class="row">
+<div class="col-sm-6">
+<label for="name-2" class="block"><b>1)Skin Contact : </b></label>
+{{ehs.skin_contact}}
+</div>
+<div class="col-sm-6">
+
+<label for="text-2" class="block"><b>2)Eye Contact : </b></label>
+
+{{ehs.eye_contact}}
+</div>
+</div>
+</div>
+</div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <label for="name-2" class="block"><b>3)Inhalation :</b></label>
+                        
+                            {{ehs.inhalation}}
+                        </div>
+                        <div class="col-sm-6">
+                          <label for="name-2" class="block"><b>4)Long term Toxic
+                            Effect :</b></label>
+                         
+                            {{ehs.toxic_effect}}
+                        </div>
+  
+                      </div>
+                    </div>
+                  </div>
+
+          <h3>D.Risk Assessment:</h3> 
+          <hr>    
+              <div class="form-group row">
+                  <div class="col-sm-12">
+                    <label for="address-2" class="block"><b>1)</b></label>
+                  </div>
+                  <div class="col-sm-6">
+                      {{ehs.RA1}}
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                      <label for="address-2" class="block"><b>2)</b></label>
+                    </div>
+                    <div class="col-sm-6">
+                        {{ehs.RA2}}
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                      <div class="col-sm-12">
+                        <label for="address-2" class="block"><b>3)</b></label>
+                      </div>
+                      <div class="col-sm-6">
+                          {{ehs.RA3}}
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                          <label for="address-2" class="block"><b>4)</b></label>
+                        </div>
+                        <div class="col-sm-6">
+                            {{ehs.RA4}}
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                          <div class="col-sm-12">
+                            <label for="address-2" class="block"><b>5)</b></label>
+                          </div>
+                          <div class="col-sm-6">
+                              {{ehs.RA5}}
+                          </div>
+                        </div>
+            </tab>
+
+            <tab>
+              <ng-template tabHeading><i class="icon-pie-chart"></i> Treatment</ng-template>
+              <h3>E.Treatment:</h3>
+              <hr>
+              <div class="form-group row">
+<div class="col-sm-12">
+<div class="row">
+<div class="col-sm-6">
+<label for="name-2" class="block"><b>1)Skin Contact : </b></label>
+
+{{ehs.skin_contacts}}
+</div>
+<div class="col-sm-6">
+<label for="text-2" class="block"><b>2)Eye Contact : </b></label>
+
+{{ehs.eye_contacts}}
+</div>
+</div>
+</div>
+</div>
+
+<div class="form-group row">
+<div class="col-sm-12">
+<div class="row">
+<div class="col-sm-6">
+<label for="name-2" class="block"><b>3)Inhalation : </b></label>
+{{ehs.inhalations}}
+</div>
+</div>
+                </div>
+                </div>
+           
+        <h3>F.Documents:</h3>
+                <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                    <label for="emp_doc" class="block"><b>Document Name:</b></label>
+                    </div>
+                    <div class="  col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                        <input type="file" class="form-control" onchange="document.getElementById('emp_doc2').src = window.URL.createObjectURL(this.files[0])" id="emp_doc2" name="document.emp_doc2" [(ngModel)]="ehs.skin_contacts">
+                    </div>	
+                </div>
+              
+            </tab>
+        
+            </tabset>
+          
+            </form>
+          
+       </div> <!--/.col-->
+  </div>
+  </div>
+ 
+  
+  
+

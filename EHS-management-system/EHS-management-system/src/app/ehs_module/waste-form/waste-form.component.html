@@ -1,0 +1,255 @@
+<div class="animated fadeIn">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+            <div class="card-footer">
+                <a [routerLink] = "'/ehs_module/Waste'"> <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Back </button></a>
+            </div>
+          <div class="card-header">
+            <strong>Waste Material Management</strong>
+          </div>
+          <div class="card-body">
+            <form class="form-horizontal" (ngSubmit)="onClickSubmit()" >
+              <h3>A.Waste Material Management:</h3>
+              <hr>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input"><font size="4" >1.Material Name </font></label>
+                <div class="col-md-6">
+                  <input type="text" id="chem_name" name="chem_name" class="form-control" placeholder="Plz enter Material name" [(ngModel)]="ehs.chem_name">
+                </div>
+              </div>
+  
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input"><font size="4" >2.Quantity</font> </label>
+                <div class="col-md-6">
+                  <input type="text" id="quantity" name="quantity" class="form-control" placeholder="Plz enter quantity" [(ngModel)]="ehs.quantity">
+                </div>
+              </div>
+  
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input"><font size="4" >3.Description</font></label>
+                <div class="col-md-6">
+                    <textarea id="waste_desc" name="waste_desc" rows="4" class="form-control" placeholder="Write something here..." [(ngModel)]="ehs.waste_desc"></textarea>
+                  </div>
+              </div>
+  
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1"><font size="4" >4.Department</font> </label>
+                <div class="col-md-3">
+                  <select id="waste_department" name="waste_department" class="form-control" [(ngModel)]="ehs.waste_department">
+                    <option value="0">Please select</option>
+                    <option value="Production">Production </option>
+                    <option value="Reserach and Development">Reserach and Development</option>
+                    <option value="Accounting and Finance">Accounting and Finance</option>
+                  </select>
+                </div>
+              </div>
+  
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input"><font size="4" >5.Date of Disposal</font> </label>
+                <div class="col-md-6">
+                  <input type="date"  id="disposal_date" name="disposal_date" placeholder="leave date.." [(ngModel)]="ehs.disposal_date"><br>              </div>
+              </div>
+             
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="select1"><font size="4" >6.Disposal Method </font></label>
+                <div class="col-md-3">
+                  <select id="techniques" name="techniques" class="form-control" [(ngModel)]="ehs.techniques">
+                    <option value="0">Please select</option>
+                    <option value="Landfill">Landfill </option>
+                    <option value="Incineration">Incineration</option>
+                    <option value="Deep well Injection">Deep well Injection</option>
+                    <option value="Recycle">Recycle</option>
+                    <option value="Filters">Filters</option>
+                    <option value="Scrubbers">Scrubbers</option>
+                  </select>
+                </div>
+              </div>
+  
+              <div class="form-group row">
+                  <div class="col-sm-12">
+                  <div class="row">
+                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                          <div class="row">
+                              <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                  <label for="emp_gender" class="block"><font size="4" >-Generation:</font></label>
+                              </div>
+                              <div class="form-group form-radio col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                  <div class="radio radio-inline">
+                                    <label>
+                                      <input type="radio" class="form_control" name="generation" id="generation_1"   [(ngModel)]="ehs.generation" [value]="1" [checked]="ehs.generation==1" >
+                                      <i class="helper"></i>Yes &nbsp;&nbsp;&nbsp;&nbsp;
+                                  </label>
+                                  <label>
+                                    <input type="radio" class="form_control" name="generation" id="generation_2"  [value]="2" [(ngModel)]="ehs.generation" [checked]="ehs.generation==2">
+                                    <i class="helper"></i>No
+                                </label>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+          </div>
+      </div>
+      <div class="form-group row">
+          <div class="col-sm-12">
+          <div class="row">
+         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="row">
+                      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                          <label for="emp_gender" class="block"><font size="4" >-Collection:</font></label>
+                      </div>
+                      <div class="form-group form-radio col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                          <div class="radio radio-inline">
+                              <label>
+                                  <input type="radio" class="form_control" name="collection_1" id="collection_1" [value]="1" [(ngModel)]="ehs.collection_1" [checked]="ehs.collection_1==1" >
+                                  <i class="helper"></i>Yes &nbsp;&nbsp;&nbsp;&nbsp;
+                              </label>
+                              <label>
+                                  <input type="radio" class="form_control" name="collection_1" id="collection_2" [value]="2" [(ngModel)]="ehs.collection_1" [checked]="ehs.collection_1==2" >
+                                  <i class="helper"></i>No
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      </div>
+  </div>
+  </div>
+  <div class="form-group row">
+      <div class="col-sm-12">
+      <div class="row">
+     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="row">
+                  <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      <label for="emp_gender" class="block"><font size="4" >-Storage:</font></label>
+                  </div>
+                  <div class="form-group form-radio col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                      <div class="radio radio-inline">
+                          <label>
+                              <input type="radio" class="form_control" name="storage_1" id="storage_1" [value]="1" [(ngModel)]="ehs.storage_1"  [checked]="ehs.storage_1==1" >
+                              <i class="helper"></i>Yes &nbsp;&nbsp;&nbsp;&nbsp;
+                          </label>
+                          <label>
+                              <input type="radio" class="form_control" name="storage_1" id="storage_2" [value]="2" [(ngModel)]="ehs.storage_1" [checked]="ehs.storage_1==2">
+                              <i class="helper"></i>No
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  </div>
+  </div>
+  </div>
+  <div class="form-group row">
+      <div class="col-sm-12">
+      <div class="row">
+     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="row">
+                  <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      <label for="emp_gender" class="block"><font size="4" >-Transportation:</font></label>
+                  </div>
+                  <div class="form-group form-radio col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                      <div class="radio radio-inline">
+                          <label>
+                              <input type="radio" class="form_control" name="transportation_1" id="transportation_1" [value]="1" [(ngModel)]="ehs.transportation_1" [checked]="ehs.transportation_1==1">
+                              <i class="helper"></i>Yes &nbsp;&nbsp;&nbsp;&nbsp;
+                          </label>
+                          <label>
+                              <input type="radio" class="form_control" name="transportation_1" id="transportation_2" [value]="2" [(ngModel)]="ehs.transportation_1" [checked]="ehs.transportation_1==2">
+                              <i class="helper"></i>No
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  </div>
+  </div>
+  </div>
+  
+   <h3>B.Transportation:</h3>
+   <hr>
+        <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="text-input"><font size="4" >1.Vehicle Name</font> </label>
+            <div class="col-md-6">
+              <input type="text" id="veh_name" name="veh_name" class="form-control" placeholder="Plz enter vehicle name"  [(ngModel)]="ehs.veh_name" >
+            </div>
+          </div>
+  
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="text-input"><font size="4" >2.Vehicle Number</font> </label>
+            <div class="col-md-6">
+              <input type="text" id="veh_number" name="veh_number" class="form-control" placeholder="Plz enter vehicle number"  [(ngModel)]="ehs.veh_number" >
+            </div>
+          </div>
+          
+          <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="text-input"><font size="4" >3.Material Quantity</font></label>
+              <div class="col-md-6">
+                <input type="text" id="material_qty" name="material_qty" class="form-control" placeholder="Plz enter material quantity"  [(ngModel)]="ehs.material_qty" >
+              </div>
+            </div>
+  
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="text-input"><font size="4" >4.Disposal Name</font></label>
+                <div class="col-md-6">
+                  <input type="text" id="dis_name" name="dis_name" class="form-control" placeholder="Plz enter disposal name" value=""  [(ngModel)]="ehs.dis_name">
+                </div>
+              </div>
+  
+              <div class="row">
+                  <div class="col-md-3">
+                    <label for="date"><font size="4" >5.Date of Dispatch</font></label>
+                  </div>
+                  <div class="col-md-3">
+                    <input type="date"  id="shipment_date" name="disposal_date" placeholder="leave date.."  [(ngModel)]="ehs.disposal_date" ><br>
+                  </div>
+                </div>
+  
+      <!-- <h3>Documents:</h3>
+      <hr>
+          <div class="row">
+              <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+              <label for="emp_doc" class="block"><font size="4" >Document Name:</font></label>
+              </div>
+              <div class="  col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                  <input type="file" class="form-control" onchange="document.getElementById('emp_doc2').src = window.URL.createObjectURL(this.files[0])" id="emp_doc2" name="document.emp_doc2">
+              </div>	
+          </div> -->
+          <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary" data-toggle="modal" (click)="infoModal.show()"><i class="fa fa-dot-circle-o" ></i> Submit </button>
+            </div>
+            </form>
+  
+          </div>
+
+        
+      </div>
+      <!--/.col-->
+    </div><!--/.row-->
+    </div>
+    <div bsModal #infoModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-info" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Send</h4>
+            <button type="button" class="close" (click)="infoModal.hide()" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Your Data Saved successfully.&hellip;</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="infoModal.hide()">Close</button>
+            <a [routerLink] = "'/ehs_module/Waste'">  <button type="button" class="btn btn-info">Okay</button></a>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+      
+    
+    
+  
+
+  

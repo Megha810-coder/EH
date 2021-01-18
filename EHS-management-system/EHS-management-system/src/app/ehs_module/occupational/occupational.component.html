@@ -1,0 +1,150 @@
+
+
+<div class="row"> 
+  <div class="col-lg-12">
+    <div class="card">
+        
+        <div class="w3-bar"> 
+            <div class="input-group">
+                <div class="row align-items-center">
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                       
+                        <a [routerLink] = "'/ehs_module/Form'"> <button type="button" class="btn btn-pill btn-block btn-primary">Create</button> </a>
+                    </div>
+                   
+                    <div id="fetchbtn">
+                      <a [routerLink] = "'/ehs_module/Factory'">  <button type="button" class="btn btn-pill btn-block btn-primary">Factory Act</button></a>
+                     </div>   
+                      <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <a [routerLink] = "'/ehs_module/Mail'">  <button type="button" class="btn btn-pill btn-block btn-primary">Email</button></a>
+                        </div>
+                        <div id="fetchbtn">
+                          <button type="button" class="btn btn-pill btn-block btn-primary" (click)="getAllTrainingList();">Show List</button>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <a [routerLink] = "'/ehs_module/Back'"> <button type="submit" class="btn btn-pill btn-block btn-primary"> Back </button></a>
+                      </div>
+
+                        
+
+                        <!-- <div class="btn-group" dropdown>
+                          <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+                            More <span class="caret"></span>
+                          </button>
+                          <ul *dropdownMenu class="dropdown-menu" role="menu">
+                            <li role="menuitem"><a class="dropdown-item" href="#">Import</a></li>
+                            <li role="menuitem"><a class="dropdown-item" href="#">Export csv</a></li>
+                
+                           
+                          </ul>
+                        </div> -->
+                        <div class="form-group" >
+                            
+                            <div class="controls" >
+                                <div class="input-group" >
+
+                                <input id="appendedInputButtons" size="16" class="form-control" type="text">
+                                <span class="input-group-append">
+                                
+                                  <button class="btn btn-secondary" type="button" >Search</button>
+                                 
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+            </div>
+          </div>
+           <br>
+           <br>
+        
+      <div class="card-header">
+          
+        <i class="fa fa-align-justify"></i> Occupational Safety Training
+        
+      </div>
+      <div class="card-body">
+        
+        <!-- <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>SR NO</th>
+              <th>TRAINING NAME</th>
+              <th>DATE</th>
+              <th>ASPECTS</th>
+              <th>TRAINING RATING</th> -->
+              <!-- <th>ACTION</th> -->
+            <!-- </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Health and Safety Legislation</td>
+              <td>2019-03-06</td>
+              <td>Laws in the workplace</td>
+              <td>A+</td> -->
+              <!-- <td>
+                <span class="badge badge-success">Active</span>
+              </td> -->
+            <!-- </tr>
+            <tr>
+              <td>2</td>
+              <td>Health and Safety Work Act-1974</td>
+              <td>2019-04-06/td>
+              <td>Health, Safety and Welfare at work</td>
+              <td>B+</td> -->
+              <!-- <td>
+                <span class="badge badge-danger">Banned</span>
+              </td> -->
+            <!-- </tr> -->
+            <!-- <tr>
+              <td>Quintin Ed</td>
+              <td>quintined@hotmail.com</td>
+              <td>7845213654</td>
+              <td>France</td>
+              <td>Admin</td>
+              <td>
+                <span class="badge badge-secondary">Inactive</span>
+              </td> 
+            </tr> -->
+          
+<!--              
+          </tbody>
+        </table> -->
+
+        <table class="table table-bordered table-striped table-sm">
+          <thead>
+           
+            <th>Training Name</th>
+             <th>Date</th>
+            <th>Aspects</th>
+            <th>Training Rating</th>
+            
+            
+          </thead>
+          <tbody>
+            <tr *ngFor="let training of myresponse">
+               
+              <td>{{training.training_name }}</td>
+               <td>{{training. training_date}}</td>
+              <td>{{training.training_aspect  }}</td>
+              <td>{{training.training_rat}}</td>
+               
+              
+            </tr>
+          </tbody>  
+        </table>
+
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </div>
+  <!--/.col-->
+</div>

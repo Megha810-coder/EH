@@ -1,0 +1,172 @@
+
+
+<div class="row"> 
+  <div class="col-lg-12">
+    <div class="card">
+        <div class="w3-bar"> 
+            <div class="input-group">
+                <div class="row align-items-center">
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                       
+                        <a [routerLink] = "'/ehs_module/Create'"> <button type="button" class="btn btn-pill btn-block btn-primary">Create</button> </a>
+                    </div>
+                   
+                     <!-- <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                      <a [routerLink] = "'/neha/Act'">  <button type="button" class="btn btn-pill btn-block btn-primary">Factory_Act</button></a>
+                     </div>    -->
+                      <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <a [routerLink] = "'/ehs_module/Mail'">  <button type="button" class="btn btn-pill btn-block btn-primary">Email</button></a>
+                        </div>
+
+                        
+                        <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                          <a [routerLink] = "'/ehs_module/Back'"> <button type="submit" class="btn btn-pill btn-block btn-primary"> Back </button></a>
+                      </div>
+
+                        <!-- <div class="btn-group" dropdown>
+                          <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+                            More <span class="caret"></span>
+                          </button>
+                          <ul *dropdownMenu class="dropdown-menu" role="menu">
+                            <li role="menuitem"><a class="dropdown-item" href="#">Import</a></li>
+                            <li role="menuitem"><a class="dropdown-item" href="#">Export csv</a></li>
+                
+                           
+                          </ul>
+                        </div> -->
+                        <div class="form-group" >
+                            
+                            <div class="controls" >
+                                <div class="input-group" >
+
+                                <input id="appendedInputButtons" size="16" class="form-control" type="text">
+                                <span class="input-group-append">
+                                
+                                  <button class="btn btn-secondary" type="button" >Search</button>
+                                 
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+            </div>
+          </div>
+           <br>
+           <br>
+        
+      <div class="card-header">
+          
+        <i class="fa fa-align-justify"></i> Incident Reports
+        
+      </div>
+      <div class="card-body">
+        <!-- <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>SR NO</th>
+              <th>TITLE</th>
+              <th>DATE</th>
+              <th>PLANT NAME</th>
+              <th>TREATMENT</th>
+              <th>ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Finger caught between machine</td>
+              <td>2019-04-06</td>
+              <td>Plant-01</td>
+              <td>Company Medical Room</td> -->
+              <!-- <td>A+</td> -->
+              <!-- <td>
+                <span class="badge badge-success">Active</span>
+              </td> -->
+            <!-- </tr>
+            <tr>
+              <td>2</td>
+              <td>Cut Injury</td>
+              <td>2019-04-06</td>
+              <td>Plant-02</td>
+              <td>Company Medical Room</td> -->
+              <!-- <td>
+                <span class="badge badge-danger">Banned</span>
+              </td> -->
+            <!-- </tr>
+            <tr>
+              <td>3</td>
+              <td>Hand caught between DIA</td>
+              <td>2019-04-06</td>
+              <td>Quality Assurance</td>
+              <td>Company Medical Room</td> -->
+              <!-- <td>
+                <span class="badge badge-danger">Banned</span>
+              </td> -->
+            <!-- </tr>
+            <tr>
+              <td>4</td>
+              <td>Finger caught between machine</td>
+              <td>2019-04-06</td>
+              <td>Production</td>
+              <td>Company Medical Room</td> -->
+              <!-- <td>
+                <span class="badge badge-danger">Banned</span>
+              </td> -->
+            <!-- </tr>
+            <tr>
+              <td>5</td>
+              <td>Cut Injury</td>
+              <td>2019-04-06</td>
+              <td>Quality Control</td>
+              <td>Company Medical Room</td> -->
+              <!-- <td>
+                <span class="badge badge-danger">Banned</span>
+              </td> -->
+            <!-- </tr>
+          
+             
+          </tbody>
+        </table> -->
+        <table class="table table-bordered table-striped table-sm">
+          <thead>
+            
+            <th>NAME</th>
+             <th>DEPARTMENT</th> 
+            <th>PLANT NAME</th> 
+            <th>TREATMENT</th> 
+            <th>Action</th> 
+            
+            
+          </thead>
+          <tbody>
+            <tr *ngFor="let incident of myresponse">
+              
+                <td>{{incident. fname}}</td>
+               <td>{{incident.department}}</td> 
+               <td>{{incident.plant_name  }}</td> 
+               <td>{{incident.action}}</td>
+               <td><button type="button" class="btn btn-info mr-1" (click)="updateIncident(incident);">UPDATE</button> 
+               
+                <button type="button" class="btn btn-info mr-1" (click)="viewIncident(incident);">VIEW</button> 
+                
+                <button type="button" class="btn btn-info mr-1" (click)="deleteIncident(incident.action_id);">DELETE</button> </td>
+
+              
+            </tr>
+          </tbody>  
+        </table>
+
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </div>
+  <!--/.col-->
+</div>
+

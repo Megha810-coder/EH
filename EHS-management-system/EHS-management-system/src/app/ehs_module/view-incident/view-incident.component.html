@@ -1,0 +1,463 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-md-12 mb-4">
+        <div class="card-footer">
+            <a [routerLink] = "'/ehs_module/Incident'"> <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Back </button></a>
+        </div>
+      <!-- Nav tabs -->
+      <form class="form-horizontal" 
+      >
+      <tabset>
+        
+        <tab>
+          <ng-template tabHeading><i class="icon-list"></i> Accident Information</ng-template>
+          <div class="row">
+            <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                      <div class="row">
+                            <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                              <label for="emp_code" class="block"><b>Employee Code</b></label>
+                             </div>
+                            <!-- <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                <input id="emp_code" name="emp_code" type="text" class=" form-control" placeholder="Employee code"  [(ngModel)]="ehs.emp_code">
+                            </div> -->
+                            {{ehs.emp_code}}
+              </div>
+                     </div>
+                   
+                </div>
+          
+                <div class="row">
+                   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                     <div class="row">
+                       <div class="  col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                              <label for="emp_fname" class="block"><b>Employee Name</b></label>
+                             </div>
+                <!-- <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                              <select name="emp_title" id="emp_title" class="form-control"
+                                  required data-bv-notempty-message="Please select title."   [(ngModel)]="ehs.title">
+                                  <option value="">---Select Title---</option>
+                                    <option value="Mr.">Mr.</option>
+                                    <option value="Mrs.">Mrs.</option>
+                                    <option value="Miss.">Miss.</option>
+                                 </select>
+                </div> -->
+                <!-- <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                           <input id="emp_fname" name="emp_fname" type="text" class=" form-control" 
+                                      placeholder="First Name"
+                                      required data-bv-notempty-message="Please enter first name."   [(ngModel)]="ehs.fname">
+                          </div>
+                          <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                <input id="emp_mname" name="emp_mname" type="text" class=" form-control"
+                                placeholder="Middle Name" 
+                                required data-bv-notempty-message="Please enter middle name."   [(ngModel)]="ehs.mname">
+                            </div>
+                            <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                <input id="emp_lname" name="emp_lname" type="text" class=" form-control"
+                                placeholder="Last Name" 
+                                required data-bv-notempty-message="Please enter last name."   [(ngModel)]="ehs.lname">
+                            </div> -->
+                            <!-- {{ehs.full_name}} -->
+                           
+                       </div>
+                     </div>
+            
+            </div>
+            <div class="row">    
+                <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                          <div class="row">
+                                <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                  <label for="plant_id" class="block"><b>Plant Id</b></label>
+                                 </div>
+                                <!-- <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                    <input id="plant_id" name="plant_id" type="text" class=" form-control" placeholder="Plant Id"  
+                                     [(ngModel)]="ehs.plant_id" >
+                                </div> -->
+                                {{ehs.plant_id}}
+                  </div>
+                         </div>
+                       
+                    </div>
+            <div class="row">    
+             <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <div class="row">
+                             <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                               <label for="plant_name" class="block"><b>Plant Name</b></label>
+                              </div>
+                             <!-- <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                 <input id="plant_name" name="plant_name" type="text" class=" form-control" placeholder="Plant name"  
+                                  [(ngModel)]="ehs.plant_name" >
+                             </div> -->
+                             {{ehs.plant_name}}
+                             
+               </div>
+                      </div>
+                    
+                 </div>
+                 <div class="row">
+                   <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                             <div class="row">
+                                   <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                     <label for="dept" class="block"><b>Department</b></label>
+                                    </div>
+                                   <!-- <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                       <input id="dept" name="dept" type="text" class=" form-control" placeholder="Department" 
+                                        [(ngModel)]="ehs.department">
+                                   </div> -->
+                                   {{ehs.department}}
+                     </div>
+                            </div>
+                          
+                       </div>
+                       <div class="row">
+                         <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                   <div class="row">
+                                         <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                           <label for="location" class="block"><b>Incident Location</b></label>
+                                          </div>
+                                         <!-- <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                             <input id="location" name="incident_location" type="text" class=" form-control" placeholder="Location"  
+                                             [(ngModel)]="ehs.incident_location">
+                                         </div> -->
+                                         {{ehs.incident_location}}
+                           </div>
+                                  </div>
+                                
+                             </div>
+
+                             <div class="row">
+                              <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="row">
+                                              <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                <label for="location" class="block"><b>Accident By </b></label>
+                                               </div>
+                                               <!-- <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                <select name="accident_by" id="accident_by" class="form-control"
+                                                required data-bv-notempty-message="Please select title."   [(ngModel)]="ehs.accident_by">
+                                                <option value="">---Select---</option>
+                                                  <option value="Human">Human</option>
+                                                  <option value="Machine">Machine</option>
+                                                  
+                                               </select>
+                                               </div>
+                                               -->
+                                               {{ehs.accident_by}}
+                                </div>
+                                       </div>
+                                     
+                                  </div>
+                             <div class="row">
+                               <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                         <div class="row">
+                                               <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                 <label for="number" class="block"><b>Personal Mobile Number</b></label>
+                                                </div>
+                                               <!-- <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                   <input id="number" name="number" type="text" class=" form-control" placeholder="Personal Mobile Number"
+                                                     [(ngModel)]="ehs.personal_mobile">
+                                               </div> -->
+                                               {{ehs.personal_mobile}}
+                                 </div>
+                                        </div>
+                                      
+                                   </div>
+                                   <div class="row">
+                                     <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                               <div class="row">
+                                                     <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                       <label for="number" class="block"><b>Emergency Mobile Number</b></label>
+                                                      </div>
+                                                     <!-- <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                         <input id="emnumber" name="emnumber" type="text" class=" form-control" placeholder="Emergency Mobile Number"  
+                                                         [(ngModel)]="ehs.emergency_mobile">
+                                                     </div> -->
+                                                     {{ehs.emergency_mobile}}
+                                       </div>
+                                              </div>
+                                            
+                                         </div>
+                                         <div class="row">
+                                          <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6"> 
+                                              <div class="row">
+                                              <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                  <label for="number" class="block" name="description"><b>Description</b></label>
+                                                 </div>
+                                        <!-- <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                        <textarea rows="4" cols="50" class="form-control" name="description" id="description" placeholder="Enter Description Details"
+                                        placeholder="Please enter Description."   [(ngModel)]="ehs.description"></textarea>
+                                        </div> -->
+                                        {{ehs.description}}
+                                         </div>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-6"> 
+                                       <div class="row">
+                                          <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                              <label for="number" class="block" name="action"><b>Imediate Action Taken</b></label>
+                                             </div>
+                                        <!-- <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                        <textarea rows="4" cols="50" class="form-control" name="action" id="action" placeholder="Type Here"
+                                        placeholder="Type Here"  [(ngModel)]="ehs.action"></textarea> 
+                                        </div> -->
+                                        {{ehs.action}}
+                                         </div>
+                                         </div>
+                                         </div>
+                                         <div class="row">
+                                          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                            <div class="row">
+                                              <div class="  col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                                     <label for="emp_fname" class="block" name="happen"><b>When Did It Happen?</b></label>
+                                                    </div>
+                                      
+                                       <div class="  col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                          <label for="date" class="block" name="date"><b>Date</b></label>
+                                          <!-- <input type="date" name="date" placeholder="date"   [(ngModel)]="ehs.date"> -->
+                                          {{ehs.action_date}}
+                                         </div>
+
+                                         <div class="  col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                          <label for="time" class="block"name="usr_time"><b>Time</b></label>
+                                          <!-- <input type="time" name="usr_time"   [(ngModel)]="ehs.time"> -->
+                                          {{ehs.time}}
+                                         </div>
+  </div>
+  </div>
+        </div>          
+                          
+                                 
+                                         
+        </tab>
+        <tab>
+          <ng-template tabHeading><i class="icon-calculator"></i> Witnessed &nbsp;</ng-template>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="row">
+                <div class="  col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                       <label for="emp_fname" class="block"><b>Name</b></label>
+                      </div>
+         <!-- <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                       <select name="witness_name" id="wit_title" class="form-control"
+                           required data-bv-notempty-message="Please select title."   [(ngModel)]="ehs.witness_name">
+                           <option value="">---Select Title---</option>
+                             <option value="Mr.">Mr.</option>
+                             <option value="Mrs.">Mrs.</option>
+                             <option value="Miss.">Miss.</option>
+                          </select>
+         </div>
+         <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                    <input id="wit_fname" name="wit_fname" type="text" class=" form-control" 
+                               placeholder="First Name"
+                               required data-bv-notempty-message="Please enter first name."  [(ngModel)]="ehs.wit_fname">
+                   </div>
+                   <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                         <input id="wit_mname" name="wit_mname" type="text" class=" form-control"
+                         placeholder="Middle Name" 
+                         required data-bv-notempty-message="Please enter middle name."  [(ngModel)]="ehs.wit_mname">
+                     </div>
+                     <div class="form-group col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                         <input id="wit_lname" name="wit_lname" type="text" class=" form-control"
+                         placeholder="Last Name" 
+                         required data-bv-notempty-message="Please enter last name."  [(ngModel)]="ehs.wit_lname">
+                     </div> -->
+                     <!-- {{ehs.full_witname}} -->
+                </div>
+              </div>
+     
+     </div>   
+     
+     <div class="row">
+      <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="row">
+                      <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <label for="dept" class="block" ><b>Department</b></label>
+                       </div>
+                      <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                           {{ehs.wit_dept}}
+                      </div>
+        </div>
+               </div>
+             
+          </div>
+
+           
+     <div class="row">
+      <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="row">
+                      <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <label for="dept" class="block"><b>Phone Number</b></label>
+                       </div>
+                      <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                          {{ehs.witness_phone}}
+                      </div>
+        </div>
+               </div>
+             
+          </div>
+
+           
+     <div class="row">
+      <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div class="row">
+                      <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <label for="dept" class="block"><b>E-mail</b></label>
+                       </div>
+                      <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                          <!-- <input id="wit_email" name="witness_email" type="text" class=" form-control" 
+                          placeholder="example@gmail.com" [(ngModel)]="ehs.witness_email"> -->
+                          {{ehs.witness_email}}
+                      </div>
+        </div>
+               </div>
+             
+          </div>
+         
+                          
+        </tab>
+        
+        <tab>
+            <ng-template tabHeading><i class="icon-pie-chart"></i> Treatment</ng-template>
+   
+
+            <div class="row">
+              <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <div class="row">
+                              <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                <label for="pro_name" class="block"><b>Initial Treatment</b></label>
+                               </div>
+                              <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                  {{ehs.ini_tre}}
+                              </div>
+                </div>
+                       </div>
+                     
+                  </div>
+                  <div class="row">
+                    <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                              <div class="row">
+                                    <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                      <label for="pro_name" class="block"><b>Secondary Treatment</b></label>
+                                     </div>
+                                    <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                        {{ehs.sec_name}}
+                                    </div>
+                      </div>
+                             </div>
+                           
+                        </div>
+                        <div class="row">
+                          <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="row">
+                                          <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                            <label for="pro_name" class="block"><b>Hospital Treatment</b></label>
+                                           </div>
+                                          <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                               {{ehs.hos_tre}}
+                                          </div>
+                            </div>
+                                   </div>
+                                 
+                              </div>
+                             
+                            <div class="row">
+                              <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-6"> 
+                             <div class="row">
+                                <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                    <label for="comment" class="block"><b>Comment</b></label>
+                                   </div>
+                              <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                              {{ehs.tre_comment}}
+                               </div>
+                               </div>
+                               </div>
+                               </div>
+                               <!-- <div class="row">
+                                <div class=" col-sm-12 col-md-12 col-lg-12 col-xl-6"> 
+                               <div class="row">
+                                  <div class="  col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                      <label for="comment" class="block"><b>Documents</b></label>
+                                     </div>
+                                <div class="form-group col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                    <input type="file" class="form-control" onchange="document.getElementById('emp_doc1_view').src = window.URL.createObjectURL(this.files[0])" id="emp_doc1" name="emp_doc1" ngModel>
+                                </div>
+                                 </div>
+                                 </div>
+                                 </div>  -->
+          </tab>
+          <tab>
+            <ng-template tabHeading><i class="icon-pie-chart"></i> Why-Why Analysis</ng-template>
+            <div class="card-header">
+              <h3>Why-Why Analysis</h3>
+            </div>
+            <div class="card-body">
+             
+             
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                <div class="form-group row">
+                  <div class="part">
+                      {{ehs.why1}}
+                  </div>
+                  
+                  <div class="col-sm-3">
+                       {{ehs.why2}}
+                  </div>
+                
+                  
+                  <div class="col-sm-3">
+                      {{ehs.why3}}
+                  </div>
+                </div>
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                <div class="form-group row">
+                  
+                  <div class="sm-3">
+                       {{ehs.why4}}
+                  </div>
+                </div>
+                
+                
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                <div class="form-group row">
+                  <div class="part">
+                    {{ehs.why5}}
+                  </div>
+              
+                  <div class="col-sm-3">
+                       {{ehs.why6}}
+                  </div>
+                
+                  
+                  <div class="col-sm-3">
+                       {{ehs.why7}}
+                  </div>
+                </div>
+                <br>
+                <br>
+                <br>
+            
+            </div>
+           
+          </tab>
+
+      </tabset>
+    </form>
+    </div><!--/.col-->
+    
+  </div><!--/.row-->
+  
+</div>
+
